@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  font-family: "Fira Code", monospace;
+  background-color: #0f0f17;
+  color: #e4e4e7;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  border-radius: 0.7rem;
+  gap: 1rem;
+}
+
+main .left,
+main .right {
+  height: 100%;
+  flex-basis: 50%;
+  border-radius: 10px;
+}
+
+main .left {
+  background-color: #16161f;
+  position: relative;
+  overflow: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.code {
+  background-color: inherit;
+  padding: 1rem;
+  border-radius: 0.7rem;
+  color: #f8f8f2;
+  font-size: 14px;
+}
+
+.code *:focus {
+  outline: none !important;
+  border: none !important;
+}
+
+.code pre {
+  margin: 0;
+}
+
+
+
+pre[class*="language-"],
+code[class*="language-"] {
+  background: none !important;
+  color: #e4e4e7;
+}
+
+main .right {
+  background-color: #202027;
+  padding: 1rem 2rem;
+  font-size: 17px;
+  overflow: auto;
+  color: #f5e0dc;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.review {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  padding: 0.7rem 2rem;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #646cff, #3a3ae6);
+  backdrop-filter: blur(10px);
+  border: none;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  text-align: center;
+  width: 140px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(100, 108, 255, 0.4);
+}
+
+.review:hover {
+  background: linear-gradient(135deg, #747bff, #5252ff);
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(100, 108, 255, 0.6);
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid white;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
