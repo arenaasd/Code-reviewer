@@ -20,7 +20,7 @@ function App() {
   async function reviewCode() {
     setLoading(true);
     try {
-      const response = await axios.post('https://review-backend-beta.vercel.app/ai/get-review', { code });
+    const response = await axios.post('https://review-backend-mocha.vercel.app/ai/get-review', { code });
       setReview(response.data);
     } catch (error) {
       setReview("Error fetching review. Please try again.");
